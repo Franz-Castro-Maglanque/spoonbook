@@ -62,10 +62,23 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
+                            <label for="mobilenumber" class="col-md-4 col-form-label text-md-right">Mobile Number</label>
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="mobilenumber" class="form-control" name="mobilenumber" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="address" class="col-md-4 col-form-label text-md-right">Address</label>
+                            <div class="col-md-6">
+                                <input id="address" class="form-control" name="address" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="company-name" class="col-md-4 col-form-label text-md-right">Company Name</label>
+                            <div class="col-md-6">
+                                <input id="company" class="form-control" name="company" required>
                             </div>
                         </div>
 

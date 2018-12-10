@@ -28,4 +28,15 @@ class DashboardController extends Controller
         $user = User::find($user_id);
         return view('dashboard')->with('posts',$user->posts);
     }
+
+    public function edit(){
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+        return view('pages/editprofile')->with('user',$user);
+    }
+
+
+    public function get_data(){
+        return view('post/data');
+    }
 }

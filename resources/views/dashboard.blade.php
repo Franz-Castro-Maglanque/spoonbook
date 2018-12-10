@@ -8,7 +8,7 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    <a href="posts/create" class="btn btn-primary">Create Package</a>
+                      
                     <h3>Your Packages</h3>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

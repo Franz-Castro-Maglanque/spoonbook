@@ -19,13 +19,16 @@ Route::get('about',function(){
     return view('pages/about');
 });
 
-Route::get('post/testing','Postscontroller@franz');
+
 Route::resource('posts','PostsController');
-// Route::get('posts/create','PostsController@create');
-// Route::get('posts','PostsController@index');
-// Route::get('/test','PostsController@show');
-// Route::get('/test/testing','PostsController@show');
 
-Auth::routes();
-
+Auth::routes(['verify' => true]);
+Route::get('posts/create','PostsController@create')->middleware('verified');
 Route::get('/dashboard', 'DashboardController@index');
+Route::get('/profile/{user_id}','PagesController@profile');
+Route::get('/editprofile','DashboardController@edit');
+Route::get('test', 'PostsController@test');
+
+
+// ajax post 
+Route::post('ajax','PostsController@get_data');

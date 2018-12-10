@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserAdditionalFields extends Migration
+class AddFieldsToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddUserAdditionalFields extends Migration
      */
     public function up()
     {
-        Schema::table('user',function($table){
-            $table->integer('mobilenumber');
+        Schema::table('users',function($table){
+            $table->string('mobilenumber');
             $table->string('address');
             $table->string('company');
         });
@@ -27,10 +27,6 @@ class AddUserAdditionalFields extends Migration
      */
     public function down()
     {
-        Schema::table('user',function($table){
-            $table->dropColumn('mobilenumber');
-            $table->dropColumn('address');
-            $table->dropColumn('company');
-        });
+        //
     }
 }

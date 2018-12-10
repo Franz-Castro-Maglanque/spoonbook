@@ -16,6 +16,10 @@
             {{Form::textarea('description', '', ['class' => 'form-control','placeholder' => 'Place Description Here'])}}
         </div>
         <div class="form-group">
+                {{Form::label('','Inclusions')}}
+                {{Form::textarea('inclusion','',['class' => 'form-control', 'placeholder' => 'Place Inclusions here'])}}
+        </div>
+        <div class="form-group">
                 {{Form::label('', 'Price: ')}}
                 {{Form::number('price','', ['placeholder' => 'Enter Price here'])}}
         </div>
@@ -26,6 +30,11 @@
         <div class="form-group">
             {{Form::label('','Upload Package Image')}}
             {{Form::file('cover_image')}}
+        </div>
+        <div class="form-group">
+            {{-- {{Form::label('','Upload Photo Gallery')}}
+            {!!Form::file('gallery_image[]')!!} --}}
+            Upload Photo Gallery<input type="file" name="image_gallery[]" multiple>
         </div>
             {{Form::submit('Submit',['class' => 'btn btn-primary'])}}
        {!! Form::close() !!}

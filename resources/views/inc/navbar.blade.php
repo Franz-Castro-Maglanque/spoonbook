@@ -11,16 +11,16 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="http://localhost/spoonbook/public/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about">About</a>
+                    <a class="nav-link" href="http://localhost/spoonbook/public/about">About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" href="posts">Packages</a>
+                    <a class="nav-link disabled" href="http://localhost/spoonbook/public/posts">Packages</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="posts/create">Create Package</a>
+                    <a class="nav-link" href="http://localhost/spoonbook/public/posts/create">Create Package</a>
                   </li>
                 </ul>
 
@@ -43,7 +43,10 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a href="dashboard" class="dropdown-item">Dashboard</a>
+                                <a href="http://localhost/spoonbook/public/dashboard" class="dropdown-item">Dashboard</a>
+                                <a href="/editprofile" class="dropdown-item">Edit Profile</a>
+                                <a href="/editaccount" class="dropdown-item">Edit Account</a>
+                                <a href="http://localhost/spoonbook/public/posts/create" class="dropdown-item">Create Package</a> 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
